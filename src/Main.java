@@ -12,7 +12,12 @@ public class Main {
         list.insertStart("Should be first element");
 
         list.print();
-        System.out.println("----------------------------");
+        System.out.println("--------------Index--------------");
         System.out.println(list.getNodeByIndex(list.size()/2).val);
+        System.out.println("--------------Value--------------");
+        System.out.println(list.getNodeByValue("Should be first element").val);
+        System.out.println("--------------Reversed--------------");
+        list.reverseListIterative();
+        list.print();
     }
 }

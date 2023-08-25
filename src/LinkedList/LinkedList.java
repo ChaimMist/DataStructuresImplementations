@@ -13,6 +13,7 @@ public class LinkedList<E> {
 
 
 //    -----------------------------------Insert Node----------------------------------------
+
     public void insertStart(E e) {
         Node<E> temp = header.next;
         header.next = new Node<E>(e);
@@ -78,9 +79,25 @@ public class LinkedList<E> {
         value is equal to the one provided.
      */
     public Node<E> getNodeByValue(E e) {
+        Node<E> temp = header.next;
+        while (temp != null){
+            if (temp.val.equals(e))
+                return temp;
+            temp = temp.next;
+        }
         return null;
     }
+// t -> a
+// H -> a -> b -> c -> d -> e -> f
+    //-----------------------------------Reversing list----------------------------------------
+                    //-----------------------------------------iterative-----------------------------------------
 
+    public void reverseListIterative(){
+
+    }
+
+
+    //-----------------------------------General Features----------------------------------------
 
 
     public int size() {
